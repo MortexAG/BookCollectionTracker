@@ -8,7 +8,7 @@ root = tk.Tk()
 root.title("Library Manager")
 root.geometry("960x540")
 
-json_file = "example.json"
+json_file = "books.json"
 
 def load_books():
     books_list = []
