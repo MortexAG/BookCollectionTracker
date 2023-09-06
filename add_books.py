@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox, Frame, Label, Button, Entry, Toplevel
 import json
+import os
 
 def main_app():
     root = tk.Tk()
@@ -9,6 +10,19 @@ def main_app():
 
     # Load the JSON file
     json_file = "books.json"
+
+    
+    # Check if the JSON file exists
+    if not os.path.exists(json_file):
+        # If it doesn't exist, create it with the default structure
+        default_data = {
+            "Books": []
+        }
+        with open(json_file, 'w', encoding='utf-8') as file:
+            json.dump(default_data, file, indent=4, ensure_ascii=False)
+
+    # load the json file
+
     def load_json():
         with open(json_file, 'r', encoding="utf-8") as file:
             old_data = json.load(file)
@@ -162,5 +176,5 @@ def main_app():
 
     root.mainloop()
 
-#if __name__ == "__main__":
-#    main_app()
+# if __name__ == "__main__":
+#     main_app()
