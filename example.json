@@ -1,0 +1,40 @@
+{
+    "Books": [
+        {
+            "Title": "A Game of Thrones",
+            "Author": "George R.R. Martin",
+            "Type": "Fantasy",
+            "PublicationDate": "1996"
+        },
+        {
+            "Title": "Harry Potter and the Philosopher's Stone",
+            "Author": "J. K. Rowling",
+            "Type": "Fantasy",
+            "PublicationDate": "1997"
+        },
+        {
+            "Title": "Gray's Anatomy",
+            "Author": "Henry Gray",
+            "Type": "Medical",
+            "PublicationDate": "1858"
+        },
+        {
+            "Title": "To Kill a Mockingbird",
+            "Author": "Harper Lee",
+            "Type": "Literature",
+            "PublicationDate": "1960"
+        },
+        {
+            "Title": "The Emperor of All Maladies",
+            "Author": "Siddhartha Mukherjee",
+            "Type": "Medical",
+            "PublicationDate": "2010"
+        },
+        {
+            "Title": "يوميات نائب في الأرياف",
+            "Author": "توفيق الحكيم",
+            "Type": "رواية",
+            "PublicationDate": "1937"
+        }
+    ]
+}
