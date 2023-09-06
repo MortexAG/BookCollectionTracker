@@ -8,7 +8,7 @@ def main_app():
     root.title("Add Books")
 
     # Load the JSON file
-    json_file = "example.json"
+    json_file = "books.json"
     def load_json():
         with open(json_file, 'r', encoding="utf-8") as file:
             old_data = json.load(file)
