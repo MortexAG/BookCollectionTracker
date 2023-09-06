@@ -1,14 +1,25 @@
 import tkinter as tk
 from tkinter import Entry, Label, Button, Listbox, Toplevel, Frame, messagebox
 import json
-import string
+#import string
+import os
 import add_books
 
 root = tk.Tk()
 root.title("Library Manager")
 root.geometry("960x540")
 
-json_file = "books.json"
+json_file = "./books.json"
+
+
+# Check if the JSON file exists
+if not os.path.exists(json_file):
+    # If it doesn't exist, create it with the default structure
+    default_data = {
+        "Books": []
+    }
+    with open(json_file, 'w', encoding='utf-8') as file:
+        json.dump(default_data, file, indent=4, ensure_ascii=False)
 
 def load_books():
     books_list = []
@@ -259,6 +270,5 @@ search_button.grid(row=1, column=1, padx=5, pady=5)
 # Details Button
 details_button = Button(search_frame,text="Details", command=show_details, activebackground="grey", activeforeground="grey", pady=5, padx=5)
 details_button.grid(row=1,column=2, padx=5, pady=5)
-
 
 root.mainloop()
